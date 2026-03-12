@@ -6,6 +6,7 @@
     <title>오늘 한 페이지 - AI 일기 앱</title>
     <meta name="description" content="AI가 당신의 하루를 함께 기록합니다. 매일 한 페이지, 나만의 일기를 써보세요.">
     <meta name="google-site-verification" content="bOa6r9d87jFHgTQb7iuN5QokGsgy99_NYrz0x1jsSmk" />
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
     <style>
         * {
             margin: 0;
@@ -36,9 +37,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 56px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(232, 224, 212, 0.1);
+            padding: 18px;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         h1 {
@@ -143,7 +150,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="app-icon">📖</div>
+        <div class="app-icon"><img src="icon.svg" alt="오늘 한 페이지 아이콘"></div>
 
         <h1>오늘 한 페이지</h1>
         <p class="subtitle">AI가 당신의 하루를 함께 기록합니다.<br>매일 한 페이지, 나만의 일기를 써보세요.</p>
