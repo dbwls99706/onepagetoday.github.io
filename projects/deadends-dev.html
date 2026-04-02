@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>deadends.dev - 홍유진</title>
+    <meta name="description" content="AI 코딩 에이전트가 실패한 접근법을 피하고 작동하는 해결책을 찾도록 돕는 구조화된 실패 지식 인프라.">
+    <meta property="og:title" content="deadends.dev - 홍유진">
+    <meta property="og:description" content="AI 코딩 에이전트가 실패한 접근법을 피하고 작동하는 해결책을 찾도록 돕는 구조화된 실패 지식 인프라.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dbwls99706.github.io/projects/deadends-dev.html">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="../One%20Page%20Today.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div class="progress-bar" aria-hidden="true"></div>
+
     <header class="site-header">
         <div class="header-inner">
             <a href="/" class="site-title">홍유진</a>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="메인 네비게이션">
                 <a href="/">Projects</a>
-                <a href="https://github.com/dbwls99706" target="_blank">GitHub</a>
+                <a href="https://github.com/dbwls99706" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button class="theme-toggle" type="button" aria-label="테마 전환">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
             </nav>
         </div>
     </header>
-    <main class="container">
+    <main id="main" class="container">
         <a href="/" class="back-link">&larr; Projects</a>
-        <div class="project-hero">
+        <section class="project-hero">
             <h1>deadends.dev</h1>
             <p class="desc">AI 코딩 에이전트가 실패한 접근법을 피하고 작동하는 해결책을 찾도록 돕는 구조화된 실패 지식 인프라.</p>
             <div class="links">
-                <a class="btn btn-primary" href="https://github.com/dbwls99706/deadends.dev" target="_blank">GitHub</a>
+                <a class="btn btn-primary" href="https://github.com/dbwls99706/deadends.dev" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>소개</h2>
             <p>51개 기술 도메인에 걸쳐 2,089개의 에러 항목을 카탈로그화합니다. Python 88개, Node.js 70개, Docker 65개 등 포괄적인 커버리지를 제공하며, 각 에러에 대해 "시도하지 마세요(Dead Ends)"와 "이것을 시도하세요(Workarounds)"를 실패율/성공률과 함께 문서화합니다.</p>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>주요 기능</h2>
             <ul>
                 <li>Dead Ends — 실패율이 문서화된 "시도하지 마세요" 접근법</li>
@@ -41,9 +59,9 @@
                 <li>18가지 디스커버리 포맷 — JSON API, llms.txt, JSON-LD, OpenAPI</li>
                 <li>Python SDK, CLI, MCP Server, RESTful API 제공</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>기술 스택</h2>
             <table class="tech-table">
                 <tr><td>언어</td><td>Python 3.10+</td></tr>
@@ -51,10 +69,12 @@
                 <tr><td>표준</td><td>OpenAPI 3.1, Schema.org, llmstxt.org</td></tr>
                 <tr><td>라이선스</td><td>MIT (코드) / CC BY 4.0 (데이터)</td></tr>
             </table>
-        </div>
+        </section>
     </main>
     <footer class="site-footer">
-        <p>&copy; 2026 홍유진</p>
+        <p><a href="../privacy-policy.html">개인정보처리방침</a> &middot; &copy; 2026 홍유진</p>
     </footer>
+
+    <script src="../js/main.js" defer></script>
 </body>
 </html>

@@ -5,59 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>홍유진 - Projects</title>
     <meta name="description" content="홍유진의 오픈소스 프로젝트 포트폴리오. 로보틱스, AI, 앱 개발.">
+    <meta property="og:title" content="홍유진 - Projects">
+    <meta property="og:description" content="로보틱스 엔지니어 &amp; 개발자. ROS 2, 컴퓨터 비전, AI 기반 로봇 시스템.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dbwls99706.github.io/">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary">
     <meta name="google-site-verification" content="bOa6r9d87jFHgTQb7iuN5QokGsgy99_NYrz0x1jsSmk" />
     <link rel="icon" type="image/png" href="One%20Page%20Today.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div class="progress-bar" aria-hidden="true"></div>
+
     <header class="site-header">
         <div class="header-inner">
             <a href="/" class="site-title">홍유진</a>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="메인 네비게이션">
                 <a href="/">Projects</a>
-                <a href="https://github.com/dbwls99706" target="_blank">GitHub</a>
+                <a href="https://github.com/dbwls99706" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button class="theme-toggle" type="button" aria-label="테마 전환">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <div class="hero">
+    <main id="main" class="container">
+        <section class="hero" aria-label="소개">
             <h1>홍유진</h1>
             <p>로보틱스 엔지니어 & 개발자. ROS 2, 컴퓨터 비전, AI 기반 로봇 시스템을 만듭니다.</p>
             <div class="hero-links">
-                <a href="https://github.com/dbwls99706" target="_blank">GitHub</a>
+                <a href="https://github.com/dbwls99706" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="mailto:yujinhong3@gmail.com">yujinhong3@gmail.com</a>
             </div>
-        </div>
+        </section>
 
         <!-- Apps & Services -->
         <section class="category">
             <h2>Apps &amp; Services</h2>
             <div class="project-grid">
-                <div class="project-card">
+                <article class="project-card">
                     <h3><a href="projects/onepagetoday.html">One Page Today</a></h3>
                     <p>아무것도 쓰지 않아도 스마트폰 사용 흔적만으로 하루가 한 페이지 일기로 남는 Android 앱.</p>
                     <div class="project-meta">
                         <span class="tag lang">Android</span>
                         <span class="tag">Google Play</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/velog-backup.html">Velog Backup</a></h3>
                     <p>Velog 블로그 포스트를 이미지 포함하여 안전하게 백업하는 무료 웹 서비스.</p>
                     <div class="project-meta">
                         <span class="tag lang">Next.js / FastAPI</span>
                         <span class="tag star">&#9733; 1</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/max-level-ant.html">만렙개미</a></h3>
                     <p>실시간 한국 주식 데이터 기반 카카오톡 모의투자 게임 챗봇.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / FastAPI</span>
                         <span class="tag star">&#9733; 2</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -65,30 +81,30 @@
         <section class="category">
             <h2>AI &amp; Developer Tools</h2>
             <div class="project-grid">
-                <div class="project-card">
+                <article class="project-card">
                     <h3><a href="projects/ros2-engineering-skills.html">ROS 2 Engineering Skills</a></h3>
                     <p>AI 코딩 에이전트에 프로덕션급 ROS 2 개발 전문성을 제공하는 에이전트 스킬 모듈.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python</span>
                         <span class="tag star">&#9733; 8</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/opensource-contribution-card.html">OpenSource Contribution Card</a></h3>
                     <p>GitHub 프로필 README에 외부 오픈소스 기여를 자동으로 표시하는 SVG 위젯.</p>
                     <div class="project-meta">
                         <span class="tag lang">JavaScript</span>
                         <span class="tag star">&#9733; 7</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/deadends-dev.html">deadends.dev</a></h3>
                     <p>AI 코딩 에이전트가 실패한 접근법을 피하도록 돕는 구조화된 실패 지식 인프라.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python</span>
                         <span class="tag">2,089 에러 / 51 도메인</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
@@ -96,82 +112,88 @@
         <section class="category">
             <h2>Robotics</h2>
             <div class="project-grid">
-                <div class="project-card">
+                <article class="project-card">
                     <h3><a href="projects/robot-auto-factory.html">물류 자동화 시스템</a></h3>
                     <p>TurtleBot3 + OpenManipulator-X 기반 컨베이어 벨트 부품 분류 및 운반 자동화.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / ROS 2</span>
                         <span class="tag">YOLOv8</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/vision-amr-crime-tracker.html">VisionAMR Crime Tracker</a></h3>
                     <p>YOLOv8 + Jetson Nano 기반 범죄 차량 감지 및 자율 추적 AI 감시 시스템.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / ROS 2</span>
                         <span class="tag">YOLOv8</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/multi-robot-planet-exploration.html">다중 로봇 행성 탐사</a></h3>
                     <p>다중 로봇 자율 협력 시스템을 활용한 외계 행성 탐사 시뮬레이션.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / ROS 2</span>
                         <span class="tag">Nav2 / Gazebo</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/office-cafe-servingbot.html">카페 서빙 로봇</a></h3>
                     <p>오피스 카페 주문 시스템과 자율 배달 서빙 로봇 시뮬레이션.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / ROS 2</span>
                         <span class="tag">SLAM / Nav2</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/auto-mapping.html">자율 매핑 &amp; 장애물 회피</a></h3>
                     <p>TurtleBot4 기반 자율 환경 매핑, 장애물 회피, 실시간 객체 추적.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / ROS 2</span>
                         <span class="tag">SLAM / OpenCV</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/yolov8-raspberrypi4.html">YOLOv8 on Raspberry Pi 4</a></h3>
                     <p>라즈베리파이 4B에서 YOLOv8 객체 인식을 실행하는 ROS 2 패키지.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / ROS 2</span>
                         <span class="tag star">&#9733; 1</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/tello-control.html">Tello 드론 컬러 제어</a></h3>
                     <p>MATLAB으로 Tello 드론을 제어하여 빨강/초록/파랑 순서로 색상을 인식하고 비행.</p>
                     <div class="project-meta">
                         <span class="tag lang">MATLAB</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/ik-sim.html">2DOF 역기구학 시뮬레이션</a></h3>
                     <p>2자유도 로봇 팔의 역기구학을 시각적으로 시뮬레이션하는 교육용 도구.</p>
                     <div class="project-meta">
                         <span class="tag lang">Python / HTML</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+                <article class="project-card">
                     <h3><a href="projects/robotics-control.html">Robotics Control</a></h3>
                     <p>다자유도 로봇 시스템의 동역학, 제어, 파라미터 추정 MATLAB 구현.</p>
                     <div class="project-meta">
                         <span class="tag lang">MATLAB</span>
                         <span class="tag star">&#9733; 1</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
 
+    <button class="back-to-top" type="button" aria-label="맨 위로 스크롤">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
     <footer class="site-footer">
         <p><a href="privacy-policy.html">개인정보처리방침</a> &middot; &copy; 2026 홍유진</p>
     </footer>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
