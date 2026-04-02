@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>만렙개미 - 홍유진</title>
+    <meta name="description" content="실시간 한국 주식 데이터 기반 카카오톡 모의투자 게임 챗봇. 초보 투자자부터 만렙 트레이더까지 성장하는 가상 주식 투자 게임.">
+    <meta property="og:title" content="만렙개미 - 홍유진">
+    <meta property="og:description" content="실시간 한국 주식 데이터 기반 카카오톡 모의투자 게임 챗봇. 초보 투자자부터 만렙 트레이더까지 성장하는 가상 주식 투자 게임.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dbwls99706.github.io/projects/max-level-ant.html">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="../One%20Page%20Today.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div class="progress-bar" aria-hidden="true"></div>
+
     <header class="site-header">
         <div class="header-inner">
             <a href="/" class="site-title">홍유진</a>
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="메인 네비게이션">
                 <a href="/">Projects</a>
-                <a href="https://github.com/dbwls99706" target="_blank">GitHub</a>
+                <a href="https://github.com/dbwls99706" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button class="theme-toggle" type="button" aria-label="테마 전환">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
             </nav>
         </div>
     </header>
-    <main class="container">
+    <main id="main" class="container">
         <a href="/" class="back-link">&larr; Projects</a>
-        <div class="project-hero">
+        <section class="project-hero">
             <h1>만렙개미</h1>
             <p class="desc">실시간 한국 주식 데이터 기반 카카오톡 모의투자 게임 챗봇. 초보 투자자부터 만렙 트레이더까지 성장하는 가상 주식 투자 게임.</p>
             <div class="links">
-                <a class="btn btn-primary" href="https://github.com/dbwls99706/max-level-ant" target="_blank">GitHub</a>
+                <a class="btn btn-primary" href="https://github.com/dbwls99706/max-level-ant" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>소개</h2>
             <p>한국투자증권 KIS OpenAPI를 통해 실시간 주가 데이터를 60초 캐시로 제공하며, 시작 자본금 1,000만원과 0.1% 수수료로 실제와 유사한 투자 환경을 구현합니다. 출석 보상, 예측 게임, 각성 시스템, PvP 배틀 등 다양한 게임 요소를 포함합니다.</p>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>주요 기능</h2>
             <ul>
                 <li>실시간 주가 조회 — KIS OpenAPI 연동, 60초 TTL 캐시</li>
@@ -42,9 +60,9 @@
                 <li>PvP 배틀 — 플레이어 간 주가 예측 대결</li>
                 <li>소셜 — 수익률/레벨 랭킹, 뉴스, 자산 히스토리 차트</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
+        <section class="section">
             <h2>기술 스택</h2>
             <table class="tech-table">
                 <tr><td>백엔드</td><td>Python 3.11, FastAPI 0.109</td></tr>
@@ -55,10 +73,12 @@
                 <tr><td>배포</td><td>Docker (multi-stage) / Railway</td></tr>
                 <tr><td>라이선스</td><td>MIT</td></tr>
             </table>
-        </div>
+        </section>
     </main>
     <footer class="site-footer">
-        <p>&copy; 2026 홍유진</p>
+        <p><a href="../privacy-policy.html">개인정보처리방침</a> &middot; &copy; 2026 홍유진</p>
     </footer>
+
+    <script src="../js/main.js" defer></script>
 </body>
 </html>
