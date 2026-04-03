@@ -41,22 +41,46 @@
             <p class="desc">오피스 카페 커피 배달 서비스를 위한 주문 시스템과 자율 서빙 로봇 시뮬레이션.</p>
             <div class="links">
                 <a class="btn btn-primary" href="https://github.com/dbwls99706/office_cafe_servingbot" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-secondary" href="https://youtu.be/tglWugMfwgc" target="_blank" rel="noopener noreferrer">Demo</a>
+            </div>
+        </section>
+
+        <div class="project-info-banner">
+            <div class="project-info-item">
+                <span class="label">기간</span>
+                <span class="value">2024.11.12 ~ 2024.11.18</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">인원</span>
+                <span class="value">4명</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">유형</span>
+                <span class="value">서비스 로봇 및 관제 시스템</span>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>담당 역할</h2>
+            <div class="role-badges">
+                <span class="role-badge">Kitchen GUI 구성</span>
+                <span class="role-badge">ROS2 통신 총괄</span>
+                <span class="role-badge">SQLite DB 저장/활용</span>
             </div>
         </section>
 
         <section class="section">
             <h2>소개</h2>
-            <p>Gazebo와 RViz2 시뮬레이션 환경에서 오피스 카페의 주문부터 배달까지 전 과정을 자동화합니다. 테이블 주문 시스템, 주방 디스플레이, 자율 서빙 로봇이 연동됩니다.</p>
+            <p>사내 카페와 서빙 로봇을 결합한 커피 배달 서비스입니다. 실제 카페와 유사한 환경을 구현하고, 배달/픽업 주문 세분화, 주문 취소 사유 제공, 서빙 로봇의 친근감 있는 UX를 목표로 했습니다.</p>
         </section>
 
         <section class="section">
             <h2>주요 기능</h2>
             <ul>
-                <li>테이블 주문 시스템 — 다양한 메뉴 옵션, 사무실 배달/외부 픽업 구분</li>
-                <li>주방 디스플레이 — 주문 교차 확인, 취소 사유 제공, 완성된 주문을 서빙 로봇에 전달</li>
-                <li>자율 서빙 로봇 — 다중 테이블 배달, 퀴즈 및 쿠폰 제공</li>
-                <li>데이터베이스 저장 — 전체 거래 기록</li>
-                <li>매출 분석 — Top 3 메뉴 통계</li>
+                <li>테이블 오더 — 다양한 메뉴 및 커스텀 옵션, 겨울 시즌 메뉴(군밤고구마 라떼, 군고구마, 붕어빵), 배달과 픽업 세분화</li>
+                <li>주방 디스플레이 — 테이블 오더와 주문 정보 비교하여 오조리 방지, 주문 취소 사유 표시, Top3 매출 분석</li>
+                <li>서빙 로봇 — 눈 모양으로 친근감 제공, 친절한 메시지와 퀴즈로 특별한 경험, 다른 테이블 배달 기능</li>
+                <li>데이터베이스 — pretty table을 이용해 SQLite에 저장된 데이터 표시</li>
                 <li>시스템 로깅 — Info, Warning, Error 레벨</li>
             </ul>
         </section>
@@ -73,6 +97,18 @@
                 <tr><td>DB</td><td>SQLite3</td></tr>
                 <tr><td>팀</td><td>4인 (2024.11, 7일)</td></tr>
             </table>
+        </section>
+
+        <section class="section">
+            <h2>데모 영상</h2>
+            <div class="video-grid">
+                <div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/tglWugMfwgc" title="카페 서빙 로봇 데모" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">카페 서빙 로봇 전체 시연</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="site-footer">

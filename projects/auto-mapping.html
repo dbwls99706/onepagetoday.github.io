@@ -41,6 +41,30 @@
             <p class="desc">TurtleBot4 기반 자율 환경 매핑, 장애물 회피, 실시간 객체 추적 시스템.</p>
             <div class="links">
                 <a class="btn btn-primary" href="https://github.com/dbwls99706/auto_mapping_with_obstacle_avoidance" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-secondary" href="https://youtu.be/94oqhU-VGfY" target="_blank" rel="noopener noreferrer">Demo</a>
+            </div>
+        </section>
+
+        <div class="project-info-banner">
+            <div class="project-info-item">
+                <span class="label">기간</span>
+                <span class="value">2024.11.26 ~ 2024.12.02</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">인원</span>
+                <span class="value">3명</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">유형</span>
+                <span class="value">SLAM 기반 로봇청소기</span>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>담당 역할</h2>
+            <div class="role-badges">
+                <span class="role-badge">자동 맵핑 코드 구현</span>
+                <span class="role-badge">wall_follow 로직 구현</span>
             </div>
         </section>
 
@@ -52,7 +76,7 @@
         <section class="section">
             <h2>주요 기능</h2>
             <ul>
-                <li>자동 매핑 — OccupancyGrid 분석, 미탐색 영역 자율 탐색</li>
+                <li>자동 매핑 — 미탐사 영역(unknown_cells) 탐지, DBSCAN 클러스터링으로 프론티어 그룹화, Nav2/SLAM 튜닝</li>
                 <li>벽면 추적 — 매핑 완료 후 /exploration_done 토픽 수신, 10초 간격 방향 전환</li>
                 <li>객체 추적 — ORB 알고리즘 기반 실시간 감지, 해밍 거리 기반 특징점 정렬</li>
                 <li>파라미터 최적화를 통한 환경 지도 완성</li>
@@ -70,6 +94,36 @@
                 <tr><td>비전</td><td>OpenCV (ORB)</td></tr>
                 <tr><td>팀</td><td>3인 (2024.11-12, 7일)</td></tr>
             </table>
+        </section>
+
+        <section class="section">
+            <h2>데모 영상</h2>
+            <div class="video-grid">
+                <div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/94oqhU-VGfY" title="자동 매핑 데모 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">자동 매핑 (1)</p>
+                </div>
+                <div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/WOQ8v9l3phc" title="자동 매핑 데모 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">자동 매핑 (2)</p>
+                </div>
+                <div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ej3Zy98UrpU" title="Wall Follow 데모" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">Wall Follow</p>
+                </div>
+                <div>
+                    <div class="video-wrapper shorts">
+                        <iframe src="https://www.youtube.com/embed/bdxOd9iguzs" title="ORB 객체 추적 데모" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">ORB 객체 추적</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="site-footer">

@@ -41,12 +41,34 @@
             <p class="desc">다중 로봇 자율 협력 시스템을 활용한 외계 행성 탐사 시뮬레이션.</p>
             <div class="links">
                 <a class="btn btn-primary" href="https://github.com/dbwls99706/multi_robot_planet_exploration_sim" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-secondary" href="https://youtu.be/1ZX-sgICrVw" target="_blank" rel="noopener noreferrer">Demo</a>
+            </div>
+        </section>
+
+        <div class="project-info-banner">
+            <div class="project-info-item">
+                <span class="label">기간</span>
+                <span class="value">2024.12.17 ~ 2024.12.23</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">인원</span>
+                <span class="value">3명</span>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>담당 역할</h2>
+            <div class="role-badges">
+                <span class="role-badge">ROS2 통신</span>
+                <span class="role-badge">각 노드 개발</span>
+                <span class="role-badge">관제시스템 map/odom</span>
+                <span class="role-badge">Nav2 파라미터 설정</span>
             </div>
         </section>
 
         <section class="section">
             <h2>소개</h2>
-            <p>달 표면을 기반으로 한 외계 행성 탐사 시나리오입니다. 외계인 캐릭터를 침입자로 배치하고, 로봇 감지 시 자율적으로 이동합니다. 다중 로봇이 협력하여 탐사, 침입자 감지, 표면 시료 수집을 수행합니다.</p>
+            <p>외계 행성 탐사 시뮬레이션입니다. 로봇1(지형 탐사/정찰, 외계인 발견 시 경고), 로봇2(로봇팔 지질탐사, 경고 시 복귀), 로봇3(외계인, 추격 → 홈 복귀 시 초기 위치 복귀). dolly + manipulator 제작 시도 → spawn 실패 → TurtleBot3 waffle 개조하여 외계인 부착 방식으로 해결했습니다.</p>
         </section>
 
         <section class="section">
@@ -73,6 +95,18 @@
                 <tr><td>GUI</td><td>PyQt5</td></tr>
                 <tr><td>팀</td><td>3인 (2024.12, 7일)</td></tr>
             </table>
+        </section>
+
+        <section class="section">
+            <h2>데모 영상</h2>
+            <div class="video-grid">
+                <div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/1ZX-sgICrVw" title="다중 로봇 행성 탐사 데모" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">다중 로봇 행성 탐사 전체 시연</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="site-footer">

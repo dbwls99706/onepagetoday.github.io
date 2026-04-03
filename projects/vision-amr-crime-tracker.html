@@ -41,22 +41,47 @@
             <p class="desc">YOLOv8 + Jetson Nano 기반 범죄 차량 감지 및 자율 추적 AI 감시 시스템.</p>
             <div class="links">
                 <a class="btn btn-primary" href="https://github.com/dbwls99706/visionAMR_crime_tracker" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-secondary" href="https://youtube.com/shorts/Hn7qKHOIUnw" target="_blank" rel="noopener noreferrer">Demo</a>
+            </div>
+        </section>
+
+        <div class="project-info-banner">
+            <div class="project-info-item">
+                <span class="label">기간</span>
+                <span class="value">2024.11.05 ~ 2024.11.11</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">인원</span>
+                <span class="value">4명</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">유형</span>
+                <span class="value">AI 비전 감시 환경 기획~구현</span>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>담당 역할</h2>
+            <div class="role-badges">
+                <span class="role-badge">ROS2 패키지 개발</span>
+                <span class="role-badge">Flask 구성 및 통신</span>
+                <span class="role-badge">YOLOv8n 라벨링/학습</span>
+                <span class="role-badge">SQLite3 DB 구축</span>
             </div>
         </section>
 
         <section class="section">
             <h2>소개</h2>
-            <p>CCTV 기반 경계 감시와 침입 감지, 범죄 차량과 일반 객체를 구분하는 분류 시스템, 범죄 차량 식별 시 자동 추적하는 자율 로봇을 결합한 AI 감시 시스템입니다.</p>
+            <p>자율 이동 로봇(AMR) 기반 범죄 추적 시스템입니다. RC카와 Dummy를 구분하기 위한 데이터셋 학습(약 95% 정확도), 인식된 객체 정보의 SQLite 저장, Flask 웹 화면의 detect/alert 시스템 구현, RC카 탐지 후 TurtleBot3을 이용한 tracking이 주요 목표였습니다.</p>
         </section>
 
         <section class="section">
             <h2>주요 기능</h2>
             <ul>
-                <li>CCTV 경계 감시 — 침입 감지 시 즉각 알림</li>
-                <li>범죄 차량 분류 — 일반 객체와 범죄 차량 구분</li>
+                <li>데이터 학습 — 웹캠 약 100장 → 400장까지 확대 라벨링, TurtleBot3 카메라용 별도 약 500장 라벨링으로 높은 정확도 달성</li>
+                <li>Flask 웹 서버 — 로그인 화면, CCTV/AMR 카메라 화면, AMR 상태(초기/이동 중/검거 완료 후 복귀), 알림창</li>
                 <li>자율 추적 — 범죄 차량 식별 시 자동 추적, 장애물 회피</li>
-                <li>관리 대시보드 — 보안 로그인, 실시간 CCTV/AMR 카메라 피드</li>
-                <li>SQLite3 데이터 관리 — 포렌식 분석 및 패턴 추적</li>
+                <li>데이터베이스 — 객체 ID, 클래스 이름, 신뢰도, 좌표, 탐지 시간, 선 넘김 여부 저장</li>
             </ul>
         </section>
 
@@ -70,8 +95,27 @@
                 <tr><td>비전</td><td>OpenCV, YOLOv8, LabelImg</td></tr>
                 <tr><td>네비게이션</td><td>Nav2, TurtleBot3</td></tr>
                 <tr><td>DB</td><td>SQLite3</td></tr>
-                <tr><td>팀</td><td>3인 (2024.11, 7일)</td></tr>
+                <tr><td>팀</td><td>4인 (2024.11, 7일)</td></tr>
             </table>
+        </section>
+
+        <section class="section">
+            <h2>데모 영상</h2>
+            <div class="video-grid">
+                <div>
+                    <div class="video-wrapper shorts">
+                        <iframe src="https://www.youtube.com/embed/Hn7qKHOIUnw" title="VisionAMR Crime Tracker 데모" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">AMR 범죄 차량 추적 시연</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>보완 사항</h2>
+            <div class="highlight-box">
+                <p>Flask 웹 화면에 TurtleBot 실시간 위치(RViz) 표시 필요, 객체 인식 후 즉시 출동 연결 필요 (방화벽 해제 필수)</p>
+            </div>
         </section>
     </main>
     <footer class="site-footer">
