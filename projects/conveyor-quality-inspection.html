@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>물류 자동화 시스템 - 홍유진</title>
-    <meta name="description" content="TurtleBot3 + OpenManipulator-X 기반 컨베이어 벨트 부품 분류 및 운반 자동화 시스템.">
-    <meta property="og:title" content="물류 자동화 시스템 - 홍유진">
-    <meta property="og:description" content="TurtleBot3 + OpenManipulator-X 기반 컨베이어 벨트 부품 분류 및 운반 자동화 시스템.">
+    <title>컨베이어 벨트 품질 검사 - 홍유진</title>
+    <meta name="description" content="Vision AI 기반 컨베이어 벨트 객체 인식 딥러닝 모델 최적화. YOLOv8 자동 품질 검사 시스템.">
+    <meta property="og:title" content="컨베이어 벨트 품질 검사 - 홍유진">
+    <meta property="og:description" content="Vision AI 기반 컨베이어 벨트 객체 인식 딥러닝 모델 최적화. YOLOv8 자동 품질 검사 시스템.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://dbwls99706.github.io/projects/robot-auto-factory.html">
+    <meta property="og:url" content="https://dbwls99706.github.io/projects/conveyor-quality-inspection.html">
     <meta property="og:locale" content="ko_KR">
     <meta name="twitter:card" content="summary">
     <link rel="icon" type="image/png" href="../One%20Page%20Today.png">
@@ -37,18 +37,17 @@
     <main id="main" class="container">
         <a href="/" class="back-link">&larr; Projects</a>
         <section class="project-hero">
-            <h1>물류 자동화 시스템</h1>
-            <p class="desc">TurtleBot3 + OpenManipulator-X 기반 컨베이어 벨트 부품 분류 및 운반 자동화 시스템.</p>
+            <h1>컨베이어 벨트 품질 검사</h1>
+            <p class="desc">Vision AI 기반 컨베이어 벨트 객체 인식 딥러닝 모델 최적화. 라즈베리 피코 자동 품질 검사 시스템.</p>
             <div class="links">
-                <a class="btn btn-primary" href="https://github.com/dbwls99706/robot_auto_factory" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a class="btn btn-secondary" href="https://youtu.be/bHjaAQ5Lchc" target="_blank" rel="noopener noreferrer">Demo</a>
+                <a class="btn btn-secondary" href="https://youtube.com/shorts/z1a0XgQi_do" target="_blank" rel="noopener noreferrer">Demo</a>
             </div>
         </section>
 
         <div class="project-info-banner">
             <div class="project-info-item">
                 <span class="label">기간</span>
-                <span class="value">2024.11.19 ~ 2024.11.25</span>
+                <span class="value">2024.12.03 ~ 2024.12.09</span>
             </div>
             <div class="project-info-item">
                 <span class="label">인원</span>
@@ -56,46 +55,51 @@
             </div>
             <div class="project-info-item">
                 <span class="label">유형</span>
-                <span class="value">Fulfilment 가상 서비스 환경 실습</span>
+                <span class="value">Vision AI 딥러닝 최적화</span>
             </div>
         </div>
 
         <section class="section">
             <h2>담당 역할</h2>
             <div class="role-badges">
-                <span class="role-badge">ROS2 통신 구성</span>
-                <span class="role-badge">PyQT 커맨드센터</span>
-                <span class="role-badge">ArUco 마커 측정</span>
-                <span class="role-badge">Unity6 Digital Twin</span>
+                <span class="role-badge">라벨링 가이드라인</span>
+                <span class="role-badge">검수 자동화 코드</span>
+                <span class="role-badge">이미지 분류 저장</span>
+                <span class="role-badge">DB 저장 및 분류</span>
             </div>
         </section>
 
         <section class="section">
             <h2>소개</h2>
-            <p>3개 과제로 구성된 프로젝트입니다: (1) OpenManipulator를 이용한 물류 공장(박스 판단 → 집어서 컨베이어 벨트로 이동), (2) ArUco 마커 활용 거리/각도 측정, (3) Unity6 기반 Digital Twin 환경 구성. 로봇 위치 분산 약 ±1cm에서도 안정적으로 동작합니다.</p>
+            <p>컨베이어 벨트를 이용한 라즈베리 피코 자동 품질 검사 시스템입니다. 초음파 센서로 칩 감지 → 컨베이어 정지 → 카메라 촬영 → 정상/불량 판별 → DB 저장 → Gradio 그래프 표시의 파이프라인으로 동작합니다.</p>
         </section>
 
         <section class="section">
             <h2>주요 기능</h2>
             <ul>
-                <li>YOLO 기반 박스 분류 — Unity 6로 학습 데이터 생성, YOLOv8으로 실시간 인식</li>
-                <li>관리 인터페이스 — 실시간 카메라 피드, YOLO 감지 결과 표시, 수동 컨베이어 제어</li>
-                <li>ArUco 마커 추적 — 글로벌 카메라 기반 마커 상대 위치/각도 측정</li>
-                <li>로봇 위치 분산 ±1cm에서도 안정적 동작</li>
-                <li>작업 완료 시 경과 시간 표시 알림</li>
+                <li>하드웨어 — 컨베이어 벨트에 일렬로 칩이 들어가도록 구성, 초음파 센서와 카메라 배치</li>
+                <li>모델 학습 — YOLOv8 6n(mAP 53.1%) → 6L(mAP 70.5%) → 라벨링 가이드라인 정의로 mAP 75.7%까지 상승</li>
+                <li>Gradio 대시보드 — 시간당 총 개수, 양품/불량품 구분 표시</li>
+                <li>SQLite 데이터베이스 — 전체 검사 기록 관리</li>
             </ul>
+        </section>
+
+        <section class="section">
+            <h2>성과</h2>
+            <div class="highlight-box">
+                <p>최종 테스트 결과: <strong>미검 0%, 과검 17.5%</strong> — 라벨링 가이드라인 정의로 팀 내 일관성 향상</p>
+            </div>
         </section>
 
         <section class="section">
             <h2>기술 스택</h2>
             <table class="tech-table">
                 <tr><td>언어</td><td>Python 3</td></tr>
-                <tr><td>OS</td><td>Ubuntu 22.04 LTS</td></tr>
-                <tr><td>프레임워크</td><td>ROS 2 Humble</td></tr>
-                <tr><td>하드웨어</td><td>TurtleBot3 Waffle, OpenManipulator-X, Arduino, 컨베이어</td></tr>
-                <tr><td>비전</td><td>OpenCV 4.5.4, YOLOv8</td></tr>
-                <tr><td>GUI</td><td>PyQt5</td></tr>
-                <tr><td>팀</td><td>3인 (2024.09 - 2024.11)</td></tr>
+                <tr><td>비전</td><td>YOLOv8 (6n → 6L), OpenCV</td></tr>
+                <tr><td>센서</td><td>초음파 센서, Sensor Fusion</td></tr>
+                <tr><td>UI</td><td>Gradio</td></tr>
+                <tr><td>DB</td><td>SQLite</td></tr>
+                <tr><td>팀</td><td>3인 (2024.12, 7일)</td></tr>
             </table>
         </section>
 
@@ -103,10 +107,10 @@
             <h2>데모 영상</h2>
             <div class="video-grid">
                 <div>
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/bHjaAQ5Lchc" title="물류 자동화 시스템 데모" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <div class="video-wrapper shorts">
+                        <iframe src="https://www.youtube.com/embed/z1a0XgQi_do" title="컨베이어 벨트 품질 검사 데모" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                     </div>
-                    <p class="video-caption">OpenManipulator + YOLO + ArUco 전체 시연</p>
+                    <p class="video-caption">자동 품질 검사 시연</p>
                 </div>
             </div>
         </section>

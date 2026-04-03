@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DART 협동로봇 운영 - 홍유진</title>
+    <meta name="description" content="두산로보틱스 DART 플랫폼을 활용한 협동로봇 동작 운영 실습. Pattern Pallet, 안전 기능 최적화.">
+    <meta property="og:title" content="DART 협동로봇 운영 - 홍유진">
+    <meta property="og:description" content="두산로보틱스 DART 플랫폼을 활용한 협동로봇 동작 운영 실습. Pattern Pallet, 안전 기능 최적화.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dbwls99706.github.io/projects/dart-collaborative-robot.html">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="../One%20Page%20Today.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">본문으로 건너뛰기</a>
+    <div class="progress-bar" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="site-title">홍유진</a>
+            <nav class="site-nav" aria-label="메인 네비게이션">
+                <a href="/">Projects</a>
+                <a href="https://github.com/dbwls99706" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button class="theme-toggle" type="button" aria-label="테마 전환">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="container">
+        <a href="/" class="back-link">&larr; Projects</a>
+        <section class="project-hero">
+            <h1>DART 협동로봇 운영</h1>
+            <p class="desc">두산로보틱스 DART 플랫폼을 활용한 협동로봇 동작 운영 실습. Pattern Pallet 및 안전 기능 최적화.</p>
+        </section>
+
+        <div class="project-info-banner">
+            <div class="project-info-item">
+                <span class="label">기간</span>
+                <span class="value">2024.12.10 ~ 2024.12.16</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">인원</span>
+                <span class="value">3명</span>
+            </div>
+            <div class="project-info-item">
+                <span class="label">플랫폼</span>
+                <span class="value">두산로보틱스 DART</span>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2>담당 역할</h2>
+            <div class="role-badges">
+                <span class="role-badge">로직 구성</span>
+                <span class="role-badge">아이디어 제시</span>
+                <span class="role-badge">기반 환경 구성</span>
+                <span class="role-badge">좌표 고안</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>과제 내용</h2>
+            <ul>
+                <li><strong>과제1 — Pattern Pallet 실습:</strong> get_pattern_point() 응용. 빈 pallet에 전체 point 순차적 채워넣기 → 역순 가져오기. 프로그램 정지 후 중단 시점부터 재개, 임의의 특정 point부터 시작 가능</li>
+                <li><strong>과제2 — 안전 기능 최적화:</strong> 워크스페이스 외 공간 제한 구역 설정(TCP가 테이블 바닥 이하/밖으로 넘어가지 않게), 충돌 민감도 90%+, TCP 속도 50mm/s 이하, 손끼임 방지용 RS1 안전 정지 모드, 전체 작업 속도 200mm/s</li>
+                <li><strong>과제3 — 협동로봇 시스템 기획:</strong> 안전 기능과 안전장치를 활용한 협동로봇 시스템 구성</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>기술 스택</h2>
+            <table class="tech-table">
+                <tr><td>플랫폼</td><td>두산로보틱스 DART</td></tr>
+                <tr><td>로봇</td><td>협동로봇 (Collaborative Robot)</td></tr>
+                <tr><td>팀</td><td>3인 (2024.12, 7일)</td></tr>
+            </table>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p><a href="../privacy-policy.html">개인정보처리방침</a> &middot; &copy; 2026 홍유진</p>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
