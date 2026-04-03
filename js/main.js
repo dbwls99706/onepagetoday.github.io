@@ -63,6 +63,99 @@
         }
     }
 
+    // ===== 3D Card Tilt Effect =====
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+        var cards = document.querySelectorAll('.project-card');
+        var tiltMax = 8;
+
+        cards.forEach(function (card) {
+            card.addEventListener('mousemove', function (e) {
+                var rect = card.getBoundingClientRect();
+                var x = e.clientX - rect.left;
+                var y = e.clientY - rect.top;
+                var centerX = rect.width / 2;
+                var centerY = rect.height / 2;
+                var rotateX = ((y - centerY) / centerY) * -tiltMax;
+                var rotateY = ((x - centerX) / centerX) * tiltMax;
+
+                card.style.transform = 'perspective(600px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) scale3d(1.02, 1.02, 1.02)';
+                card.style.setProperty('--mouse-x', x + 'px');
+                card.style.setProperty('--mouse-y', y + 'px');
+            });
+
+            card.addEventListener('mouseleave', function () {
+                card.style.transform = '';
+                card.style.transition = 'transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+                setTimeout(function () {
+                    card.style.transition = '';
+                }, 500);
+            });
+
+            card.addEventListener('mouseenter', function () {
+                card.style.transition = 'border-color 0.3s ease, box-shadow 0.3s ease';
+            });
+        });
+    }
+
+    // ===== Cursor Glow Effect =====
+    if (!prefersReducedMotion && window.innerWidth > 768) {
+        var glow = document.createElement('div');
+        glow.classList.add('cursor-glow');
+        document.body.appendChild(glow);
+
+        var glowX = 0, glowY = 0;
+        var currentX = 0, currentY = 0;
+
+        document.addEventListener('mousemove', function (e) {
+            glowX = e.clientX;
+            glowY = e.clientY;
+        }, { passive: true });
+
+        function animateGlow() {
+            currentX += (glowX - currentX) * 0.08;
+            currentY += (glowY - currentY) * 0.08;
+            glow.style.left = currentX + 'px';
+            glow.style.top = currentY + 'px';
+            requestAnimationFrame(animateGlow);
+        }
+        animateGlow();
+
+        document.addEventListener('mouseleave', function () {
+            glow.style.opacity = '0';
+        });
+        document.addEventListener('mouseenter', function () {
+            glow.style.opacity = '1';
+        });
+    }
+
+    // ===== Hero Parallax on Mouse Move =====
+    if (!prefersReducedMotion) {
+        var hero = document.querySelector('.hero');
+        if (hero) {
+            var heroH1 = hero.querySelector('h1');
+            var heroP = hero.querySelector('p');
+            var heroLinks = hero.querySelector('.hero-links');
+
+            hero.addEventListener('mousemove', function (e) {
+                var rect = hero.getBoundingClientRect();
+                var x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+                var y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+
+                if (heroH1) heroH1.style.transform = 'translate(' + (x * 12) + 'px, ' + (y * 8) + 'px)';
+                if (heroP) heroP.style.transform = 'translate(' + (x * 6) + 'px, ' + (y * 4) + 'px)';
+                if (heroLinks) heroLinks.style.transform = 'translate(' + (x * 4) + 'px, ' + (y * 3) + 'px)';
+            });
+
+            hero.addEventListener('mouseleave', function () {
+                if (heroH1) heroH1.style.transform = '';
+                if (heroP) heroP.style.transform = '';
+                if (heroLinks) heroLinks.style.transform = '';
+            });
+        }
+    }
+
     // ===== Back to Top Button =====
     var backToTop = document.querySelector('.back-to-top');
     if (backToTop) {

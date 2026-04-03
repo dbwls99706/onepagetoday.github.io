@@ -224,10 +224,17 @@ button:focus-visible {
     color: var(--text-primary);
     margin-bottom: 0.75rem;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 50%, #a78bfa 100%);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .hero p {
@@ -285,6 +292,7 @@ button:focus-visible {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1rem;
+    perspective: 1000px;
 }
 
 .project-card {
@@ -292,20 +300,45 @@ button:focus-visible {
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     padding: 1.5rem;
-    transition: border-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+    transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
     display: flex;
     flex-direction: column;
     position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: var(--mouse-y, 50%);
+    left: var(--mouse-x, 50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(138, 180, 248, 0.12) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+    z-index: 0;
+}
+
+[data-theme="light"] .project-card::before {
+    background: radial-gradient(circle, rgba(26, 115, 232, 0.08) 0%, transparent 70%);
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-card:hover {
     border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(138, 180, 248, 0.06);
+    box-shadow: 0 8px 32px rgba(138, 180, 248, 0.1), 0 0 0 1px rgba(138, 180, 248, 0.05);
 }
 
 [data-theme="light"] .project-card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(26, 115, 232, 0.1);
 }
 
 .project-card h3 {
@@ -636,6 +669,135 @@ button:focus-visible {
     transition: color var(--transition-fast);
 }
 .site-footer a:hover { color: var(--text-muted); }
+
+/* ===== Cursor Glow ===== */
+.cursor-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(138, 180, 248, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+[data-theme="light"] .cursor-glow {
+    background: radial-gradient(circle, rgba(26, 115, 232, 0.03) 0%, transparent 70%);
+}
+
+/* ===== 3D Section Titles ===== */
+.category h2 {
+    transition: transform var(--transition-normal), letter-spacing var(--transition-normal);
+}
+
+.category:hover h2 {
+    letter-spacing: 3px;
+}
+
+/* ===== Hero 3D Parallax ===== */
+.hero {
+    transform-style: preserve-3d;
+}
+
+.hero h1 {
+    transform: translateZ(30px);
+}
+
+.hero p {
+    transform: translateZ(15px);
+}
+
+/* ===== Card Inner 3D Depth ===== */
+.project-card h3,
+.project-card p,
+.project-card .project-meta {
+    position: relative;
+    z-index: 1;
+}
+
+.project-card h3 {
+    transform: translateZ(20px);
+}
+
+.project-card .project-meta {
+    transform: translateZ(10px);
+}
+
+/* ===== Floating Animation for Buttons ===== */
+.btn-primary {
+    transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(138, 180, 248, 0.2);
+}
+
+[data-theme="light"] .btn-primary:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Tag Hover 3D ===== */
+.tag {
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-card:hover .tag {
+    transform: translateZ(5px) scale(1.02);
+}
+
+/* ===== Video Wrapper 3D Hover ===== */
+.video-wrapper {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(138, 180, 248, 0.12);
+}
+
+[data-theme="light"] .video-wrapper:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Project Info Banner Shimmer ===== */
+.project-info-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-info-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(138, 180, 248, 0.04), transparent);
+    animation: shimmer 8s ease-in-out infinite;
+}
+
+[data-theme="light"] .project-info-banner::after {
+    background: linear-gradient(90deg, transparent, rgba(26, 115, 232, 0.04), transparent);
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* ===== Role Badge Hover ===== */
+.role-badge {
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.role-badge:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(138, 180, 248, 0.15);
+}
 
 /* ===== Scroll Reveal Animation ===== */
 .reveal {
