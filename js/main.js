@@ -130,32 +130,6 @@
         });
     }
 
-    // ===== Hero Parallax on Mouse Move =====
-    if (!prefersReducedMotion) {
-        var hero = document.querySelector('.hero');
-        if (hero) {
-            var heroH1 = hero.querySelector('h1');
-            var heroP = hero.querySelector('p');
-            var heroLinks = hero.querySelector('.hero-links');
-
-            hero.addEventListener('mousemove', function (e) {
-                var rect = hero.getBoundingClientRect();
-                var x = (e.clientX - rect.left - rect.width / 2) / rect.width;
-                var y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-
-                if (heroH1) heroH1.style.transform = 'translate(' + (x * 12) + 'px, ' + (y * 8) + 'px)';
-                if (heroP) heroP.style.transform = 'translate(' + (x * 6) + 'px, ' + (y * 4) + 'px)';
-                if (heroLinks) heroLinks.style.transform = 'translate(' + (x * 4) + 'px, ' + (y * 3) + 'px)';
-            });
-
-            hero.addEventListener('mouseleave', function () {
-                if (heroH1) heroH1.style.transform = '';
-                if (heroP) heroP.style.transform = '';
-                if (heroLinks) heroLinks.style.transform = '';
-            });
-        }
-    }
-
     // ===== Back to Top Button =====
     var backToTop = document.querySelector('.back-to-top');
     if (backToTop) {
