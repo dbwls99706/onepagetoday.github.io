@@ -696,19 +696,6 @@ button:focus-visible {
     letter-spacing: 3px;
 }
 
-/* ===== Hero 3D Parallax ===== */
-.hero {
-    transform-style: preserve-3d;
-}
-
-.hero h1 {
-    transform: translateZ(30px);
-}
-
-.hero p {
-    transform: translateZ(15px);
-}
-
 /* ===== Card Inner 3D Depth ===== */
 .project-card h3,
 .project-card p,
