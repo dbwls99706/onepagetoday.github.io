@@ -151,4 +151,44 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+
+    // ===== Live GitHub Stars =====
+    var repoCards = document.querySelectorAll('[data-repo]');
+    if (repoCards.length > 0 && typeof fetch === 'function') {
+        fetch('https://api.github.com/users/dbwls99706/repos?per_page=100')
+            .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+            .then(function (repos) {
+                var byName = {};
+                repos.forEach(function (r) { byName[r.name] = r.stargazers_count; });
+                repoCards.forEach(function (card) {
+                    var name = card.getAttribute('data-repo').split('/').pop();
+                    var count = byName[name];
+                    var el = card.querySelector('.js-star');
+                    if (typeof count === 'number' && el) {
+                        el.innerHTML = '\u2605 ' + count;
+                    }
+                });
+            })
+            .catch(function () { /* keep static fallback */ });
+    }
+
+    // ===== Live deadends.dev Stats =====
+    var deadendsTargets = document.querySelectorAll('.js-deadends-errors, .js-deadends-domains');
+    if (deadendsTargets.length > 0 && typeof fetch === 'function') {
+        fetch('https://deadends.dev/api/v1/stats.json')
+            .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+            .then(function (s) {
+                if (typeof s.total_errors === 'number') {
+                    document.querySelectorAll('.js-deadends-errors').forEach(function (el) {
+                        el.textContent = s.total_errors.toLocaleString('ko-KR');
+                    });
+                }
+                if (typeof s.total_domains === 'number') {
+                    document.querySelectorAll('.js-deadends-domains').forEach(function (el) {
+                        el.textContent = s.total_domains.toLocaleString('ko-KR');
+                    });
+                }
+            })
+            .catch(function () { /* keep static fallback */ });
+    }
 })();
